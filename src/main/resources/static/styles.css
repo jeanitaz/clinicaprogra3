@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=Bebas+Neue&family=Coiny&family=Combo&family=Creepster&family=Edu+QLD+Hand:wght@400..700&family=Fascinate+Inline&family=Genos:ital,wght@0,100..900;1,100..900&family=Hanalei+Fill&family=Knewave&family=Lexend:wght@100..900&family=Limelight&family=Nosifer&family=Pacifico&display=swap');
+.titulo-nav{
+  font-family: "Coiny", system-ui;
+
+}
+
+
+.text-nav{
+   font-family: "Limelight", sans-serif;
+         }
+
+
+.carrusel-text{
+  font-family: "Limelight", sans-serif;
+
+}
+
+
+.carrusel-text-2{
+  font-family: "Genos", sans-serif;
+    font-weight: 400;
+
+
+}
+
+.text-salud{
+  font-family: "Lexend", sans-serif;
+    font-weight: 500;
+
+
+}
+
+
+
+

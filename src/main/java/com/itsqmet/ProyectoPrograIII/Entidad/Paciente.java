@@ -1,0 +1,46 @@
+package com.itsqmet.ProyectoPrograIII.Entidad;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Paciente {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank(message = "El nombre es obligatorio")
+    private String nombre;
+
+    @NotBlank(message = "El apellido es obligatorio")
+    private String apellido;
+
+    @Pattern(regexp = "\\d+")
+    @NotBlank(message = "La cédula es obligatoria")
+    private String cedula;
+
+    @Pattern(regexp = "\\d+")
+    @NotBlank(message = "La Fecha de Nacimiento es obligatoria")
+    private String fechaNacimiento;
+
+    @NotBlank(message = "La dirección es obligatoria")
+    private String direccion;
+
+    @NotBlank(message = "El email es obligatorio")
+    private String email;
+
+    @Pattern(regexp = "\\d{10}")
+    @NotBlank(message = "El teléfono debe tener 10 dígitos")
+    private String telefono;
+}

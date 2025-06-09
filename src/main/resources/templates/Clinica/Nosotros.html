@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.3.0/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+
+    <title>Sobre Nosotros</title>
+</head>
+<body>
+<nav class="bg-white p-4 text-red-500 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="flex items-center titulo-nav text-2xl font-bold pl-8">
+            <img th:src="@{/imagenes/cruz1.jpg}" alt="Cruz" class="h-10 w-10 mr-4">
+            CLINICA SALUD TOTAL
+        </a>
+        <ul class="flex space-x-6">
+            <li><a href="/" class="hover:text-red-200 text-nav">Inicio</a></li>
+            <li><a href="/formularioC" class="hover:text-red-200 text-nav">Agendar Cita</a></li>
+            <li><a href="/contacto" class="hover:text-red-200 text-nav">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="py-24 relative xl:mr-0 lg:mr-5 mr-0">
+    <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+        <div class="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
+            <div class="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
+                <div class="w-full flex-col justify-center items-start gap-8 flex">
+                    <div class="flex-col justify-start lg:items-start items-center gap-4 flex">
+                        <h6 class="text-gray-400 text-base font-normal leading-relaxed">Sobre nosotros</h6>
+                        <div class="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
+                            <h2
+                                    class="text-black-700 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
+                                Nuestro Equipo de Trabajo.</h2>
+                            <p
+                                    class="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
+                                Contamos con un equipo multidisciplinario de profesionales comprometidos con tu
+                                bienestar. Nuestra prioridad es brindarte una atención médica cálida, oportuna y de
+                                calidad</p>
+                        </div>
+                    </div>
+                    <div class="w-full flex-col justify-center items-start gap-6 flex">
+                        <div class="w-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
+                            <div
+                                    class="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                                <h4 class="text-gray-900 text-2xl font-bold font-manrope leading-9">33+ Años</h4>
+                                <p class="text-gray-500 text-base font-normal leading-relaxed">Cumpliendo nuestra
+                                    labor</p>
+                            </div>
+                            <div
+                                    class="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                                <h4 class="text-gray-900 text-2xl font-bold font-manrope leading-9">371+ Medicos
+                                </h4>
+                                <p class="text-gray-500 text-base font-normal leading-relaxed">Médicos comprometidos a
+                                    cuidar tu salud.</p>
+                            </div>
+                        </div>
+                        <div class="w-full h-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
+                            <div
+                                    class="w-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                                <h4 class="text-gray-900 text-2xl font-bold font-manrope leading-9">10+ Sucursales</h4>
+                                <p class="text-gray-500 text-base font-normal leading-relaxed">A nivel nacional</p>
+                            </div>
+                            <div
+                                    class="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
+                                <h4 class="text-gray-900 text-2xl font-bold font-manrope leading-9">99% Clientes Satisfechos</h4>
+                                <p class="text-gray-500 text-base font-normal leading-relaxed">Refleja nuestro enfoque en la satisfacción del cliente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:justify-start justify-center items-start flex">
+                <div
+                        class="sm:w-[564px] w-full sm:h-[646px] h-full sm:bg-gray-100 rounded-3xl sm:border border-gray-200 relative">
+                    <img class="sm:mt-5 sm:ml-5 w-full h-full rounded-3xl object-cover"
+                         th:src="@{/imagenes/team.png}" alt="about Us image"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-red-600 text-white p-8 mt-12">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2025 Clínica Salud Total. Todos los derechos reservados.</p>
+        <p>Teléfono: +593 99 123 4567 | Horario: Lun-Vie 8:00 - 18:00</p>
+    </div>
+</footer>
+</body>
+</html>
