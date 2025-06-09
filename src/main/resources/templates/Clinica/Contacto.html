@@ -76,19 +76,19 @@
                 <h2 class="text-red-400 font-manrope text-4xl font-semibold leading-10 mb-11">Envíanos un Mensaje</h2>
                 <input type="text"
                        class="w-full h-12 text-gray-600 placeholder-gray-400  shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
-                       placeholder="Nombre">
+                       placeholder="Nombre" pattern="[A-Za-z\s]{2,}" required>
                 <input type="text"
                        class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
-                       placeholder="Email">
+                       placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                 <input type="text"
                        class="w-full h-12 text-gray-600 placeholder-gray-400 shadow-sm bg-transparent text-lg font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
-                       placeholder="Celular">
+                       placeholder="Celular" pattern="^\d{10}$" required>
                 <div class="mb-10">
                     <h4 class="text-gray-500 text-lg font-normal leading-7 mb-4">Método de comunicación preferido</h4>
                     <div class="flex">
                         <div class="flex items-center mr-11">
                             <input id="radio-group-1" type="radio" name="radio-group"
-                                   class="form-radio text-indigo-600 w-5 h-5 mr-2"/>
+                                   class="form-radio text-indigo-600 w-5 h-5 mr-2" required/>
                             <label for="radio-group-1"
                                    class="cursor-pointer text-gray-500 text-base font-normal leading-6">
                                 Email
@@ -96,7 +96,7 @@
                         </div>
                         <div class="flex items-center">
                             <input id="radio-group-2" type="radio" name="radio-group"
-                                   class="form-radio text-indigo-600 w-5 h-5 mr-2"/>
+                                   class="form-radio text-indigo-600 w-5 h-5 mr-2" pattern="^\d{10}$" required/>
                             <label for="radio-group-2"
                                    class="cursor-pointer text-gray-500 text-base font-normal leading-6">
                                 Celular
