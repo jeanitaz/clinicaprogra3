@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaVirtual Medicos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+
+<header class="bg-[#009FE3] text-white flex items-center justify-between px-6 py-4">
+    <div class="text-2xl font-bold flex items-center gap-2">
+        <span class="font-semibold text-white">NovaVirtual</span>
+    </div>
+    <div class="flex items-center gap-4">
+        <a class="text-sm">Servicios Virtuales</a>
+        <a href="/index" class="bg-orange-500 px-4 py-1 rounded-full text-sm font-medium">Inicio</a>
+        <a href="/pacientes" class="bg-orange-500 px-4 py-1 rounded-full text-sm font-medium">Pacientes</a>
+    </div>
+</header><br><br><br>
+<main class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-10 items-start">
+
+    <section>
+        <h1 class="text-3xl font-bold text-[#009FE3]">NOVA<span class="text-black">Virtual</span></h1>
+        <div class="flex items-center mt-2 gap-2">
+            <span class="text-lg">🩺 Medicos</span>
+        </div>
+        <div class="mt-6">
+            <p class="font-semibold">Aquí encontrarás:</p>
+            <ul class="list-disc list-inside text-gray-700 mt-2">
+                <li>Detalle de pacientes hospitalizados a su cargo o como interconsulta</li>
+                <li>Resultados de imagen y laboratorio</li>
+                <li>Módulo de honorarios</li>
+            </ul>
+        </div>
+
+        <div class="mt-6">
+            <form action="/pacientes/validar" method="post">
+                <input name="cedula" type="text" placeholder="Ingresa tu cédula o pasaporte"
+                       class="w-full p-3 rounded-full shadow border border-gray-300 focus:outline-none" required />
+                <button type="submit"
+                        class="mt-4 w-full bg-orange-500 text-white font-semibold py-2 rounded-full hover:bg-orange-600">
+                    Validar
+                </button>
+                <div th:if="${alerta}" class="mt-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                    <span th:text="${alerta}"></span>
+                </div>
+            </form>
+        </div>
+
+        <div class="mt-6 text-sm text-gray-600">
+            <p>Ingrese con el usuario proporcionado por el hospital seguido de @nova.med.ec
+                Su contraseña es la misma proporcionada por el hospital.
+                Ej: Si su usario es pperez ustede deberá ingresar pperez@nova.med.ec
+                <br><a href="#" class="text-red-500">Si tiene algún inconveniente comuníquese al</a>  02 399 8000
+            </p>
+        </div>
+    </section>
+    <section class="text-center">
+        <p class="mt-2 text-xl text-gray-700 font-semibold text-justify">¿Qué es NovaVirtual Medicos?</p>
+        <p class="text-lg mt-4 text-justify">
+            NovaVirtual Médicos es una plataforma digital del Hospital Nova Salus diseñada para que el personal médico gestione de manera eficiente y segura la atención a sus pacientes. A través de esta herramienta, los profesionales de la salud pueden revisar historiales clínicos, emitir recetas electrónicas, consultar resultados de exámenes y coordinar sus agendas de manera centralizada,
+            mejorando así la calidad del servicio y facilitando la toma de decisiones clínicas desde cualquier lugar y en cualquier momento.
+        </p>
+    </section>
+</main><br><br>
+<br><br><br>
+<footer class="bg-blue-900 text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-2xl font-bold mb-4">Hospital Nova Salud</h3>
+                <p class="text-blue-200">Creciendo para cuidarte</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end">
+                <div class="mb-4">
+                    <span class="font-bold">Síguenos:</span> @hospitalNovaSaludec
+                </div>
+                <div class="text-xl font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    1800 NVSALUD
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-300">
+            <p>© 2023 Hospital  Nova Salud. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+<script>
+    function redirigirPorCedula(event) {
+        event.preventDefault();
+        const cedula = document.getElementById('input-cedula').value.trim();
+        if (cedula) {
+            window.location.href = '/pacientes/' + encodeURIComponent(cedula);
+        }
+        return false;
+    }
+</script>
+</body>
+</html>

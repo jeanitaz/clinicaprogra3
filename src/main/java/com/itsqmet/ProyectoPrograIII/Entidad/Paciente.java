@@ -9,6 +9,9 @@ import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
 
 
 @Entity
@@ -30,9 +33,8 @@ public class Paciente {
     @NotBlank(message = "La cédula es obligatoria")
     private String cedula;
 
-    @Pattern(regexp = "\\d+")
-    @NotBlank(message = "La Fecha de Nacimiento es obligatoria")
-    private String fechaNacimiento;
+    @DateTimeFormat (pattern = "yyyy-MM-dd")
+    private Date fechaNacimiento;
 
     @NotBlank(message = "La dirección es obligatoria")
     private String direccion;
