@@ -6,6 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class PagesControler {
 
+    @GetMapping("/admin")
+    public String mostrarAdmin() {
+        return "Pages/admin";
+    }
+    @GetMapping("/administrador")
+    public String mostrarAdministrador() {
+        return "Pages/administrador";
+    }
     @GetMapping("/home")
     public String mostrarHome() {
         return "paciente";
@@ -14,17 +22,14 @@ public class PagesControler {
     public String mostrarIndex(){
         return "index";
     }
-
     @GetMapping("/nosotros")
     public String mostrarNosotros(){
         return "Clinica/Nosotros";
     }
-
     @GetMapping("/contacto")
     public String mostrarContacto(){
         return "Clinica/contacto";
     }
-
     @GetMapping("/formularioC")
     public String mostrarFormulario() {
         return "Paciente/formularioC";
@@ -37,8 +42,40 @@ public class PagesControler {
     public String mostrarPacienteHome() {
         return "Clinica/pacienteHome";
     }
+    @GetMapping("/formulario")
+    public String mostrarFormularioM() {
+        return "Medico/formularioMedico";
+    }
     @GetMapping("/Clinica/medico")
     public String mostrarMedico() {
         return "Clinica/medico";
+    }
+    @GetMapping("/Clinica/medicoHome")
+    public String mostrarmedicoHome() {
+        return "Clinica/medicoHome";
+    }
+    @GetMapping("/Agendamiento")
+    public String mostrarAgenda() {
+        return "Pages/Agendar";
+    }
+    @GetMapping("/Perfil")
+    public String mostrarPerfil() {
+        return "Pages/Perfil";
+    }
+    @GetMapping("/Resultados")
+    public String mostrarResultados() {
+        return "Pages/Resultados";
+    }
+    @GetMapping("/Facturas")
+    public String mostrarFacturas() {
+        return "Pages/Facturas";
+    }
+    @GetMapping("/Historial")
+    public String mostrarHistorial() {
+        return "Pages/Historial";
+    }
+    @GetMapping("/Soporte")
+    public String mostrarSoporte() {
+        return "Pages/Soporte";
     }
 }

@@ -4,26 +4,17 @@
     <meta charset="UTF-8">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.3.0/dist/flowbite.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" th:href="@{/styles.css}">
     <title>Registro De Pacientes</title>
 </head>
 <body>
-<nav class="bg-transparent shadow-md">
-  <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
-    <div class="flex items-center gap-4">
-      <img src="/imagenes/logo.png" alt="Clínica NovaSalud" class="h-12" />
-      <div class="hidden md:flex gap-6 text-lg">
-        <a href="/index" class="hover:text-blue-600">Inicio</a>
-        <a href="/nosotros" class="hover:text-blue-600">Sobre Nosotros</a>
-        <a href="/contacto" class="hover:text-blue-600">Contactanos</a>
-      </div>
-    </div>
-    <div class="flex gap-2">
-      <a href="/Clinica/paciente" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded text-base">Pacientes</a>
-      <a class="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 rounded text-base">Médicos</a>
-    </div>
-  </div>
-</nav>
+<header class="bg-[#009FE3] text-white flex items-center justify-between px-6 py-4 shadow-lg">
+    <span class="text-2xl font-bold flex items-center gap-2">
+      <i class="fa-solid fa-user-doctor mr-2"></i> NovaVirtual
+    </span>
+  <a href="/Clinica/medico" class="bg-orange-500 px-4 py-1 rounded-full font-medium hover:bg-orange-600 transition">Volver</a>
+</header>
 <section class="py-24 bg-gray-50 min-h-screen flex items-center justify-center">
   <form th:action="@{/pacientes/registrar}" th:object="${paciente}" method="post" enctype="multipart/form-data" class="bg-white shadow-xl rounded-2xl p-10 w-full max-w-3xl space-y-10">
     <div class="text-center space-y-2">
@@ -65,8 +56,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Antecedentes médicos -->
     <div>
       <h4 class="text-lg font-semibold text-gray-900 mb-4">Antecedentes Médicos Personales <span class="text-red-600">*</span></h4>
       <table class="w-full text-sm border border-gray-300 rounded-lg overflow-hidden bg-white">
@@ -161,7 +150,7 @@
     </div>
   </form>
 </section>
-<footer class="bg-blue-900 text-white py-12">
+<footer class="bg-blue-900 text-white py-2">
   <div class="container mx-auto px-6">
     <div class="flex flex-col md:flex-row justify-between items-center">
       <div class="mb-6 md:mb-0">
@@ -181,7 +170,7 @@
       </div>
     </div>
     <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-300">
-      <p>© 2023 Hospital  Nova Salud. Todos los derechos reservados.</p>
+      <p>© 2023 Hospital Nova Salud. Todos los derechos reservados.</p>
     </div>
   </div>
 </footer>

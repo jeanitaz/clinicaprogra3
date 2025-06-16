@@ -64,13 +64,13 @@ public class PacienteController {
     }
 
     //Validar si existe un paciente por cedula
-    @PostMapping("/pacientes/validar")
+    @PostMapping("/validar")
     public String validarPaciente(@RequestParam String cedula, Model model) {
         if (pacienteServicio.existePorCedula(cedula)) {
             return "redirect:/Clinica/pacienteHome";
         } else {
             model.addAttribute("alerta", "Cédula no válida o no encontrada.");
-            return "paciente";
+            return "Clinica/paciente";
         }
     }
 }

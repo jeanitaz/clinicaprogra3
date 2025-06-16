@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaVirtual Pacientes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#ebecf0] font-sans">
+<header class="bg-[#009FE3] text-white flex items-center justify-between px-6 py-4">
+    <div class="text-4xl font-bold flex items-center gap-2">
+        <span class="font-semibold text-white ">NovaVirtual</span>
+    </div>
+    <div class="flex items-center gap-4">
+        <a class="texwt-3xl">Servicios Virtuales</a>
+        <a href="Clinica/pacienteHome" class="bg-orange-500 px-4 py-1 rounded-full  font-medium fs-5">Volver</a>
+    </div>
+</header>
+<section class="relative pt-40 pb-24">
+    <img src="/imagenes/starfall-night-sky-mountains-aesthetic-gif-preview-desktop-wallpaper.gif" alt="cover-image" class="w-full absolute top-0 left-0 z-0 h-60 object-cover">
+    <div class="w-full max-w-7xl mx-auto px-6 md:px-8">
+        <div class="flex items-center justify-center sm:justify-start relative z-10 mb-5">
+            <img src="/imagenes/perro.gif" alt="user-avatar-image" class="w-40 h-40 border-4 border-solid border-white rounded-full object-cover">
+        </div>
+    </div>
+    <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
+        <div class="lg:my-14 my-8 grid lg:grid-cols-2 grid-cols-1 gap-8">
+            <div class="w-full flex-col justify-start items-start gap-6 inline-flex">
+                <h4 class="text-gray-900 text-xl font-semibold leading-8">Informacion</h4>
+                <div class="w-full flex-col justify-start items-start gap-8 flex">
+                    <div class="w-full flex-col justify-start items-start gap-1.5 flex">
+                        <label for="" class="flex gap-1 items-center text-gray-600 text-base font-medium leading-relaxed">Email
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                                <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444"/>
+                            </svg>
+                        </label>
+                        <input type="text" class="w-full focus:outline-none text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed px-5 py-3 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 justify-start items-center gap-2 inline-flex" placeholder="John">
+                    </div>
+                    <div class="w-full justify-start items-start gap-7 flex sm:flex-row flex-col">
+                        <div class="w-full flex-col justify-start items-start gap-1.5 flex">
+                            <label for="" class="flex gap-1 items-center text-gray-600 text-base font-medium leading-relaxed">Nombre
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                                    <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444"/>
+                                </svg>
+                            </label>
+                            <input type="text" class="w-full focus:outline-none text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed px-5 py-3 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 justify-start items-center gap-2 inline-flex" placeholder="John">
+                        </div>
+                        <div class="w-full flex-col justify-start items-start gap-1.5 flex">
+                            <label for="" class="flex gap-1 items-center text-gray-600 text-base font-medium leading-relaxed">Apellido
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                                    <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444"/>
+                                </svg>
+                            </label>
+                            <input type="text" class="w-full focus:outline-none text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed px-5 py-3 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 justify-start items-center gap-2 inline-flex" placeholder="Smith">
+                        </div>
+                    </div>
+                    <div class="w-full flex-col justify-start items-start gap-1.5 flex">
+                        <label for="" class="flex gap-1 items-center text-gray-600 text-base font-medium leading-relaxed">Nombres Completos
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                                <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444"/>
+                            </svg>
+                        </label>
+                        <input type="text" class="w-full focus:outline-none text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed px-5 py-3 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 justify-start items-center gap-2 inline-flex" placeholder="John">
+                    </div>
+                </div>
+            </div>
+            <div class="w-full flex-col justify-start items-start gap-6 inline-flex">
+                <h4 class="text-gray-900 text-xl font-semibold leading-8">Referencia</h4>
+                <div class="w-full flex-col justify-start items-start gap-8 flex">
+                    <div class="w-full flex-col justify-start items-start gap-1.5 flex">
+                        <label for="" class="flex gap-1 items-center text-gray-600 text-base font-medium leading-relaxed">Calle Principal
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                                <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444"/>
+                            </svg>
+                        </label>
+                        <input type="text" class="w-full focus:outline-none text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed px-5 py-3 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 justify-start items-center gap-2 inline-flex" placeholder="John">
+                    </div>
+                    <div class="w-full flex-col justify-start items-start gap-1.5 flex">
+                        <label for="" class="flex gap-1 items-center text-gray-600 text-base font-medium leading-relaxed">Calle Secundaria
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                                <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444"/>
+                            </svg>
+                        </label>
+                        <input type="text" class="w-full focus:outline-none text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed px-5 py-3 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 justify-start items-center gap-2 inline-flex" placeholder="John">
+                    </div>
+                    <div class="w-full justify-start items-start gap-7 flex sm:flex-row flex-col">
+                        <div class="w-full flex-col justify-start items-start gap-1.5 flex">
+                            <label for="" class="flex gap-1 items-center text-gray-600 text-base font-medium leading-relaxed">Ciudad
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                                    <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444"/>
+                                </svg>
+                            </label>
+                            <input type="text" class="w-full focus:outline-none text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed px-5 py-3 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 justify-start items-center gap-2 inline-flex" placeholder="John">
+                        </div>
+                        <div class="w-full flex-col justify-start items-start gap-1.5 flex">
+                            <label for="" class="flex gap-1 items-center text-gray-600 text-base font-medium leading-relaxed">Provincia
+                                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
+                                    <path d="M3.11222 6.04545L3.20668 3.94744L1.43679 5.08594L0.894886 4.14134L2.77415 3.18182L0.894886 2.2223L1.43679 1.2777L3.20668 2.41619L3.11222 0.318182H4.19105L4.09659 2.41619L5.86648 1.2777L6.40838 2.2223L4.52912 3.18182L6.40838 4.14134L5.86648 5.08594L4.09659 3.94744L4.19105 6.04545H3.11222Z" fill="#EF4444"/>
+                                </svg>
+                            </label>
+                            <input type="text" class="w-full focus:outline-none text-gray-900 placeholder-gray-400 text-lg font-normal leading-relaxed px-5 py-3 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] border border-gray-200 justify-start items-center gap-2 inline-flex" placeholder="Smith">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="mx-auto sm:w-fit w-full px-7 py-3 bg-indigo-600 hover:bg-indigo-700 transition-all duration-700 ease-in-out rounded-xl shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
+            <span class="px-2 text-center text-white text-lg font-semibold leading-8">Actualizar</span>
+        </button>
+    </div>
+</section>
+<footer class="bg-blue-900 text-white py-2">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-2xl font-bold mb-4">Hospital Nova Salud</h3>
+                <p class="text-blue-200">Creciendo para cuidarte</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end">
+                <div class="mb-4">
+                    <span class="font-bold">Síguenos:</span> @hospitalNovaSaludec
+                </div>
+                <div class="text-xl font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    1800 NVSALUD
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-300">
+            <p>© 2023 Hospital Nova Salud. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

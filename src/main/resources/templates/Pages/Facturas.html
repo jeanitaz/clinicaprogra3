@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Facturas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-[#ebecf0] to-[#cbeafe] min-h-screen font-sans">
+    <header class="bg-[#009FE3] text-white flex items-center justify-between px-6 py-4 shadow-lg">
+        <span class="text-2xl font-bold flex items-center gap-2">
+            <i class="fa-solid fa-file-invoice-dollar mr-2"></i> NovaVirtual
+        </span>
+        <a href="/Clinica/pacienteHome" class="bg-orange-500 px-4 py-1 rounded-full font-medium hover:bg-orange-600 transition">Volver</a>
+    </header>
+    <main class="max-w-4xl mx-auto mt-10 bg-white rounded-2xl shadow-2xl p-10">
+        <h1 class="text-3xl font-extrabold text-center text-[#009FE3] mb-10 tracking-tight">Facturas</h1>
+        <div class="mb-8 flex justify-center">
+            <div class="relative w-full sm:w-1/2">
+                <span class="absolute left-3 top-2.5 text-[#009FE3]"><i class="fa fa-search"></i></span>
+                <input type="text" placeholder="Buscar factura..." class="w-full pl-10 pr-4 py-2 border-2 border-[#009FE3] rounded-lg shadow focus:outline-none focus:ring-2 focus:ring-[#009FE3] transition" />
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Tarjeta Factura 1 -->
+            <div class="bg-[#f1f5f9] rounded-xl shadow hover:shadow-lg transition p-6 flex flex-col gap-3">
+                <div class="flex items-center gap-3">
+                    <div class="bg-[#009FE3] text-white rounded-full p-3">
+                        <i class="fa-solid fa-file-invoice-dollar fa-lg"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold">Factura #00123</h2>
+                        <span class="text-sm text-gray-500">10/06/2025</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-2">
+                    <span class="text-gray-600 font-semibold"><i class="fa-solid fa-dollar-sign mr-1"></i> $120.00</span>
+                    <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition text-sm font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-file-pdf"></i> Ver PDF
+                    </a>
+                </div>
+            </div>
+            <!-- Tarjeta Factura 2 -->
+            <div class="bg-[#f1f5f9] rounded-xl shadow hover:shadow-lg transition p-6 flex flex-col gap-3">
+                <div class="flex items-center gap-3">
+                    <div class="bg-[#38bdf8] text-white rounded-full p-3">
+                        <i class="fa-solid fa-file-invoice-dollar fa-lg"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold">Factura #00124</h2>
+                        <span class="text-sm text-gray-500">08/06/2025</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-2">
+                    <span class="text-gray-600 font-semibold"><i class="fa-solid fa-dollar-sign mr-1"></i> $80.00</span>
+                    <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition text-sm font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-file-pdf"></i> Ver PDF
+                    </a>
+                </div>
+            </div>
+            <!-- Tarjeta Factura 3 -->
+            <div class="bg-[#f1f5f9] rounded-xl shadow hover:shadow-lg transition p-6 flex flex-col gap-3">
+                <div class="flex items-center gap-3">
+                    <div class="bg-[#009FE3] text-white rounded-full p-3">
+                        <i class="fa-solid fa-file-invoice-dollar fa-lg"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold">Factura #00125</h2>
+                        <span class="text-sm text-gray-500">05/06/2025</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-2">
+                    <span class="text-gray-600 font-semibold"><i class="fa-solid fa-dollar-sign mr-1"></i> $50.00</span>
+                    <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition text-sm font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-file-pdf"></i> Ver PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main><br><br><br><br><br>
+    <footer class="bg-blue-900 text-white py-2">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">Hospital Nova Salud</h3>
+                    <p class="text-blue-200">Creciendo para cuidarte</p>
+                </div>
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="mb-4">
+                        <span class="font-bold">Síguenos:</span> @hospitalNovaSaludec
+                    </div>
+                    <div class="text-xl font-bold">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        1800 NVSALUD
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-300">
+                <p>© 2023 Hospital Nova Salud. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

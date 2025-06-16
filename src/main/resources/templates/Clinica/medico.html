@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,15 +9,15 @@
 <body class="bg-gray-50 font-sans">
 
 <header class="bg-[#009FE3] text-white flex items-center justify-between px-6 py-4">
-    <div class="text-2xl font-bold flex items-center gap-2">
-        <span class="font-semibold text-white">NovaVirtual</span>
+    <div class="text-4xl font-bold flex items-center gap-2">
+        <span class="font-semibold text-white ">NovaVirtual</span>
     </div>
     <div class="flex items-center gap-4">
-        <a class="text-sm">Servicios Virtuales</a>
-        <a href="/index" class="bg-orange-500 px-4 py-1 rounded-full text-sm font-medium">Inicio</a>
-        <a href="/pacientes" class="bg-orange-500 px-4 py-1 rounded-full text-sm font-medium">Pacientes</a>
+        <a class="texwt-3xl">Servicios Virtuales</a>
+        <a href="/index" class="bg-orange-500 px-4 py-1 rounded-full  font-medium fs-5">Inicio</a>
     </div>
-</header><br><br><br>
+</header>
+<br><br><br>
 <main class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-10 items-start">
 
     <section>
@@ -35,16 +35,13 @@
         </div>
 
         <div class="mt-6">
-            <form action="/pacientes/validar" method="post">
-                <input name="cedula" type="text" placeholder="Ingresa tu cédula o pasaporte"
+            <form onsubmit="return redirigirPorUsuario(event)">
+                <input id="input-usuario" name="usuario" type="text" placeholder="Ingresa tu Usuario"
                        class="w-full p-3 rounded-full shadow border border-gray-300 focus:outline-none" required />
                 <button type="submit"
                         class="mt-4 w-full bg-orange-500 text-white font-semibold py-2 rounded-full hover:bg-orange-600">
                     Validar
                 </button>
-                <div th:if="${alerta}" class="mt-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-                    <span th:text="${alerta}"></span>
-                </div>
             </form>
         </div>
 
@@ -64,8 +61,8 @@
         </p>
     </section>
 </main><br><br>
-<br><br><br>
-<footer class="bg-blue-900 text-white py-12">
+<br><br><br><br>
+<footer class="bg-blue-900 text-white py-2">
     <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="mb-6 md:mb-0">
@@ -85,16 +82,16 @@
             </div>
         </div>
         <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-300">
-            <p>© 2023 Hospital  Nova Salud. Todos los derechos reservados.</p>
+            <p>© 2023 Hospital Nova Salud. Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>
 <script>
-    function redirigirPorCedula(event) {
+    function redirigirPorUsuario(event) {
         event.preventDefault();
-        const cedula = document.getElementById('input-cedula').value.trim();
-        if (cedula) {
-            window.location.href = '/pacientes/' + encodeURIComponent(cedula);
+        const usuario = document.getElementById('input-usuario').value.trim();
+        if (usuario) {
+            window.location.href = '/medicos/' + encodeURIComponent(usuario);
         }
         return false;
     }

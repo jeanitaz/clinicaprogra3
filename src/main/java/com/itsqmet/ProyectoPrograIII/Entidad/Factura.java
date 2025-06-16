@@ -1,9 +1,6 @@
 package com.itsqmet.ProyectoPrograIII.Entidad;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -16,4 +13,6 @@ public class Factura {
     private Long id;
     private Double monto;
     private String estado;
+
+
 }

@@ -32,213 +32,241 @@
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
         <div class="swiper-slide relative">
-            <img src="/imagenes/imagen2.jpg" class="w-full h-[80vh] object-cover" alt="slide" />
-            <div class="absolute top-1/3 left-10 text-white">
-                <h2 class="text-3xl font-semibold text-blue-500">Nuestro Laboratorio en tu casa</h2>
-                <p class="text-lg text-black mt-4">Agenda tu cita para toma de muestras al</p>
-                <p class="text-lg text-black">399 8000 ext.0 de lunes a domingo de 07h00 a 19h00</p>
+            <img src="/imagenes/imagen2.jpg" class="w-full h-[100vh] object-cover" alt="slide" />
+            <div class="absolute top-1/3 left-10 max-w-xl bg-black bg-opacity-50 rounded-xl p-8 shadow-lg text-white">
+                <h2 class="text-6xl md:text-7xl font-extrabold text-blue-400 mb-4 drop-shadow-lg">Nuestro Laboratorio en tu casa</h2>
+                <p class="text-3xl md:text-5xl text-white mb-2">Agenda tu cita para toma de muestras al</p>
+                <p class="text-xl md:text-2xl text-blue-100">Llama al 399 8000 ext.0<br>Atención de lunes a domingo, 07h00 a 19h00</p>
             </div>
         </div>
         <div class="swiper-slide relative">
-            <img src="/imagenes/imagen3.jpg" class="w-full h-[80vh] object-cover" alt="slide" />
-            <div class="absolute top-1/3 left-10 text-white">
-                <h2 class="text-3xl font-semibold text-blue-500">Nuestro Laboratorio en tu casa</h2>
-                <p class="text-lg text-black mt-4">Agenda tu cita para toma de muestras al</p>
-                <p class="text-lg text-black">399 8000 ext.0 de lunes a domingo de 07h00 a 19h00</p>
+            <img src="/imagenes/imagen3.jpg" class="w-full h-[100vh] object-cover" alt="slide" />
+            <div class="absolute top-1/3 left-10 max-w-xl bg-black bg-opacity-50 rounded-xl p-8 shadow-lg text-white">
+                <h2 class="text-6xl md:text-7xl font-extrabold text-blue-400 mb-4 drop-shadow-lg">Cuidamos de ti y tu familia</h2>
+                <p class="text-3xl md:text-5xl text-white mb-2">Chequeos médicos sin salir de casa</p>
+                <p class="text-xl md:text-2xl text-blue-100">Reserva tu consulta online o presencial<br>¡Salud a tu alcance!</p>
             </div>
         </div>
         <div class="swiper-slide relative">
-            <img src="/imagenes/imagen4.jpg" class="w-full h-[80vh] object-cover" alt="slide" />
-            <div class="absolute top-1/3 left-10 text-white">
-                <h2 class="text-3xl font-semibold text-blue-500">Nuestro Laboratorio en tu casa</h2>
-                <p class="text-lg text-black mt-4">Agenda tu cita para toma de muestras al</p>
-                <p class="text-lg text-black">399 8000 ext.0 de lunes a domingo de 07h00 a 19h00</p>
+            <img src="/imagenes/imagen4.jpg" class="w-full h-[100vh] object-cover" alt="slide" />
+            <div class="absolute top-1/3 left-10 max-w-xl bg-black bg-opacity-50 rounded-xl p-8 shadow-lg text-white">
+                <h2 class="text-6xl md:text-7xl font-extrabold text-blue-400 mb-4 drop-shadow-lg">Resultados rápidos y seguros</h2>
+                <p class="text-3xl md:text-5xl text-white mb-2">Tus exámenes listos en línea</p>
+                <p class="text-xl md:text-2xl text-blue-100">Accede a tus resultados desde cualquier lugar<br>Confidencialidad y confianza</p>
             </div>
         </div>
     </div>
     <div class="swiper-button-next text-blue-500"></div>
     <div class="swiper-button-prev text-blue-500"></div>
 </div>
-<section class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-lg">
+<section class="container mx-auto my-12 p-8 bg-white rounded-2xl shadow-2xl">
     <div class="max-w-7xl mx-auto">
-        <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl font-semibold">Médicos <span class="bg-red-500 text-white px-2 py-0.5 rounded text-sm">371</span></h2>
-            <p class="text-gray-600">Médicos comprometidos a cuidar tu salud.</p>
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-3xl font-bold text-blue-900 flex items-center gap-2">
+                Médicos
+                <span class="bg-red-500 text-white px-3 py-1 rounded-full text-base font-semibold shadow">371</span>
+            </h2>
+            <p class="text-gray-500 text-lg">Médicos comprometidos a cuidar tu salud.</p>
         </div>
-        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-
-            <div class="bg-white rounded-lg shadow-md overflow-hidden border">
-                <img th:src="@{/imagenes/Med1.png}" alt="Dr. Foto" class="w-full h-56 object-cover">
-                <div class="p-4">
-                    <h3 class="text-blue-800 font-bold uppercase text-sm">JORGE CLEMENTE ESTRELLA MOGRO</h3>
-                    <p class="text-gray-500 text-sm font-semibold mb-4">OFTALMOLOGÍA</p>
-
-                    <div class="flex gap-2 mb-4">
-                        <button class="flex-1 border border-blue-500 text-blue-500 rounded-md py-1 text-sm hover:bg-blue-50">
-                            👤 Ver perfil
+        <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <!-- Tarjeta Médico 1 -->
+            <div class="bg-white rounded-2xl shadow-lg border hover:shadow-2xl transition-shadow duration-300 group">
+                <img th:src="@{/imagenes/Med1.png}" alt="Dr. Foto" class="w-full h-56 object-cover rounded-t-2xl">
+                <div class="p-5">
+                    <h3 class="text-blue-800 font-extrabold uppercase text-base mb-1 tracking-wide">JORGE CLEMENTE ESTRELLA MOGRO</h3>
+                    <p class="text-blue-500 text-sm font-semibold mb-4">OFTALMOLOGÍA</p>
+                    <div class="flex gap-3 mb-4">
+                        <button class="flex-1 flex items-center justify-center gap-1 border border-blue-500 text-blue-500 rounded-full py-2 text-sm font-semibold hover:bg-blue-50 transition">
+                            <span>👤</span> Ver perfil
                         </button>
-                        <button class="flex-1 border border-blue-500 text-blue-500 rounded-md py-1 text-sm hover:bg-blue-50">
-                            📞 Llamar
+                        <button class="flex-1 flex items-center justify-center gap-1 border border-green-500 text-green-600 rounded-full py-2 text-sm font-semibold hover:bg-green-50 transition">
+                            <span>📞</span> Llamar
                         </button>
                     </div>
-
-                    <div class="flex items-center justify-center gap-2 text-sm text-gray-600">
-                        <input type="checkbox" id="teleconsulta1" class="accent-blue-500">
-                        <label for="teleconsulta1">TeleConsulta</label>
+                    <div class="flex items-center gap-2 text-sm text-gray-600">
+                        <input type="checkbox" id="teleconsulta1" class="accent-blue-500 scale-125">
+                        <label for="teleconsulta1" class="select-none">TeleConsulta</label>
                     </div>
                 </div>
             </div>
-            <div class="bg-white rounded-lg shadow-md overflow-hidden border">
-                <img th:src="@{/imagenes/Med2.png}" alt="Dra. Foto" class="w-full h-56 object-cover">
-                <div class="p-4">
-                    <h3 class="text-blue-800 font-bold uppercase text-sm">SHIRLEY XIMENA MORAN ARIAS</h3>
-                    <p class="text-gray-500 text-sm font-semibold mb-4">PEDIATRÍA</p>
-
-                    <div class="flex gap-2 mb-4">
-                        <button class="flex-1 border border-blue-500 text-blue-500 rounded-md py-1 text-sm hover:bg-blue-50">
-                            👤 Ver perfil
+            <!-- Tarjeta Médico 2 -->
+            <div class="bg-white rounded-2xl shadow-lg border hover:shadow-2xl transition-shadow duration-300 group">
+                <img th:src="@{/imagenes/Med2.png}" alt="Dra. Foto" class="w-full h-56 object-cover rounded-t-2xl">
+                <div class="p-5">
+                    <h3 class="text-blue-800 font-extrabold uppercase text-base mb-1 tracking-wide">SHIRLEY XIMENA MORAN ARIAS</h3>
+                    <p class="text-pink-500 text-sm font-semibold mb-4">PEDIATRÍA</p>
+                    <div class="flex gap-3 mb-4">
+                        <button class="flex-1 flex items-center justify-center gap-1 border border-blue-500 text-blue-500 rounded-full py-2 text-sm font-semibold hover:bg-blue-50 transition">
+                            <span>👤</span> Ver perfil
                         </button>
-                        <button class="flex-1 border border-blue-500 text-blue-500 rounded-md py-1 text-sm hover:bg-blue-50">
-                            📞 Llamar
-                        </button>
-                    </div>
-
-                    <div class="flex items-center justify-center gap-2 text-sm text-gray-600">
-                        <input type="checkbox" id="teleconsulta2" class="accent-blue-500">
-                        <label for="teleconsulta2">TeleConsulta</label>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-md overflow-hidden border">
-                <img th:src="@{/imagenes/Med3.png}" alt="Dra. Foto" class="w-full h-56 object-cover">
-                <div class="p-4">
-                    <h3 class="text-blue-800 font-bold uppercase text-sm">CARMEN ELENA SANCHEZ MENDEZ</h3>
-                    <p class="text-gray-500 text-sm font-semibold mb-4">NEUROLOGÍA PEDIÁTRICA</p>
-
-                    <div class="flex gap-2 mb-4">
-                        <button class="flex-1 border border-blue-500 text-blue-500 rounded-md py-1 text-sm hover:bg-blue-50">
-                            👤 Ver perfil
-                        </button>
-                        <button class="flex-1 border border-blue-500 text-blue-500 rounded-md py-1 text-sm hover:bg-blue-50">
-                            📞 Llamar
+                        <button class="flex-1 flex items-center justify-center gap-1 border border-green-500 text-green-600 rounded-full py-2 text-sm font-semibold hover:bg-green-50 transition">
+                            <span>📞</span> Llamar
                         </button>
                     </div>
-
-                    <div class="flex items-center justify-center gap-2 text-sm text-gray-600">
-                        <input type="checkbox" id="teleconsulta2" class="accent-blue-500">
-                        <label for="teleconsulta2">TeleConsulta</label>
+                    <div class="flex items-center gap-2 text-sm text-gray-600">
+                        <input type="checkbox" id="teleconsulta2" class="accent-blue-500 scale-125">
+                        <label for="teleconsulta2" class="select-none">TeleConsulta</label>
                     </div>
                 </div>
             </div>
-            <div class="bg-white rounded-lg shadow-md overflow-hidden border">
-                <img th:src="@{/imagenes/Med4.png}" alt="Dr. Foto" class="w-full h-56 object-cover">
-                <div class="p-4">
-                    <h3 class="text-blue-800 font-bold uppercase text-sm">SHIRLEY XIMENA MORAN ARIAS</h3>
-                    <p class="text-gray-500 text-sm font-semibold mb-4">DERMATOLOÍA</p>
-
-                    <div class="flex gap-2 mb-4">
-                        <button class="flex-1 border border-blue-500 text-blue-500 rounded-md py-1 text-sm hover:bg-blue-50">
-                            👤 Ver perfil
+            <!-- Tarjeta Médico 3 -->
+            <div class="bg-white rounded-2xl shadow-lg border hover:shadow-2xl transition-shadow duration-300 group">
+                <img th:src="@{/imagenes/Med3.png}" alt="Dra. Foto" class="w-full h-56 object-cover rounded-t-2xl">
+                <div class="p-5">
+                    <h3 class="text-blue-800 font-extrabold uppercase text-base mb-1 tracking-wide">CARMEN ELENA SANCHEZ MENDEZ</h3>
+                    <p class="text-purple-500 text-sm font-semibold mb-4">NEUROLOGÍA PEDIÁTRICA</p>
+                    <div class="flex gap-3 mb-4">
+                        <button class="flex-1 flex items-center justify-center gap-1 border border-blue-500 text-blue-500 rounded-full py-2 text-sm font-semibold hover:bg-blue-50 transition">
+                            <span>👤</span> Ver perfil
                         </button>
-                        <button class="flex-1 border border-blue-500 text-blue-500 rounded-md py-1 text-sm hover:bg-blue-50">
-                            📞 Llamar
+                        <button class="flex-1 flex items-center justify-center gap-1 border border-green-500 text-green-600 rounded-full py-2 text-sm font-semibold hover:bg-green-50 transition">
+                            <span>📞</span> Llamar
                         </button>
                     </div>
-
-                    <div class="flex items-center justify-center gap-2 text-sm text-gray-600">
-                        <input type="checkbox" id="teleconsulta2" class="accent-blue-500">
-                        <label for="teleconsulta2">TeleConsulta</label>
+                    <div class="flex items-center gap-2 text-sm text-gray-600">
+                        <input type="checkbox" id="teleconsulta3" class="accent-blue-500 scale-125">
+                        <label for="teleconsulta3" class="select-none">TeleConsulta</label>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta Médico 4 -->
+            <div class="bg-white rounded-2xl shadow-lg border hover:shadow-2xl transition-shadow duration-300 group">
+                <img th:src="@{/imagenes/Med4.png}" alt="Dr. Foto" class="w-full h-56 object-cover rounded-t-2xl">
+                <div class="p-5">
+                    <h3 class="text-blue-800 font-extrabold uppercase text-base mb-1 tracking-wide">SHIRLEY XIMENA MORAN ARIAS</h3>
+                    <p class="text-yellow-500 text-sm font-semibold mb-4">DERMATOLOGÍA</p>
+                    <div class="flex gap-3 mb-4">
+                        <button class="flex-1 flex items-center justify-center gap-1 border border-blue-500 text-blue-500 rounded-full py-2 text-sm font-semibold hover:bg-blue-50 transition">
+                            <span>👤</span> Ver perfil
+                        </button>
+                        <button class="flex-1 flex items-center justify-center gap-1 border border-green-500 text-green-600 rounded-full py-2 text-sm font-semibold hover:bg-green-50 transition">
+                            <span>📞</span> Llamar
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-gray-600">
+                        <input type="checkbox" id="teleconsulta4" class="accent-blue-500 scale-125">
+                        <label for="teleconsulta4" class="select-none">TeleConsulta</label>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="py-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-    <div class="bg-white rounded-xl shadow-md overflow-hidden">
-        <!-- Section Header -->
-        <div class="bg-blue-900 px-6 py-4">
-            <h2 class="text-2xl md:text-3xl font-bold text-white">Nuestros Indicadores</h2>
-            <p class="text-blue-200 font-semibold mt-1">NPS Marzo 2025</p>
-        </div>
-
-        <!-- Indicators Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
-            <!-- Satisfaction Index -->
-            <div class="p-6 text-center">
-                <p class="text-4xl md:text-5xl font-bold text-blue-900">92,1%</p>
-                <p class="text-gray-600 mt-2">Índice Satisfacción</p>
-                <div class="mt-4 h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div class="h-full bg-green-500" style="width: 92.1%"></div>
-                </div>
+<section class="py-14 px-4 sm:px-8 lg:px-16 max-w-6xl mx-auto bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-xl">
+    <div class="mb-10 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mb-2 tracking-tight">Nuestros Indicadores</h2>
+        <p class="text-blue-600 font-semibold">NPS Junio 2025</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Satisfacción -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+            <div class="bg-green-100 p-4 rounded-full mb-4">
+                <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M14 10V6a4 4 0 10-8 0v4M6 10v10a2 2 0 002 2h8a2 2 0 002-2V10"></path>
+                </svg>
             </div>
-
-            <!-- Recommendation Index -->
-            <div class="p-6 text-center">
-                <p class="text-4xl md:text-5xl font-bold text-blue-900">90,9%</p>
-                <p class="text-gray-600 mt-2">Índice Recomendación</p>
-                <div class="mt-4 h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div class="h-full bg-blue-500" style="width: 90.9%"></div>
-                </div>
-            </div>
-
-            <!-- Detractors -->
-            <div class="p-6 text-center">
-                <p class="text-4xl md:text-5xl font-bold text-blue-900">1,70%</p>
-                <p class="text-gray-600 mt-2">Detractores</p>
-                <div class="mt-4 h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div class="h-full bg-red-500" style="width: 1.7%"></div>
-                </div>
+            <p class="text-5xl font-bold text-green-600 mb-2">92,1%</p>
+            <p class="text-gray-700 font-semibold mb-4">Índice Satisfacción</p>
+            <div class="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-green-400 to-green-600 animate-pulse" style="width: 92.1%"></div>
             </div>
         </div>
-
-        <!-- NPS Explanation -->
-        <div class="px-6 py-4 bg-gray-50 border-t border-gray-200">
-            <p class="text-sm text-gray-600">
-                <span class="font-semibold">NPS (Net Promoter Score):</span> Métrica que mide la lealtad de los clientes en una escala de -100 a 100.
-            </p>
+        <!-- Recomendación -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+            <div class="bg-blue-100 p-4 rounded-full mb-4">
+                <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M17 8h2a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V10a2 2 0 012-2h2"></path>
+                    <circle cx="12" cy="5" r="3"></circle>
+                </svg>
+            </div>
+            <p class="text-5xl font-bold text-blue-600 mb-2">90,9%</p>
+            <p class="text-gray-700 font-semibold mb-4">Índice Recomendación</p>
+            <div class="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-blue-400 to-blue-600 animate-pulse" style="width: 90.9%"></div>
+            </div>
+        </div>
+        <!-- Detractores -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center hover:scale-105 transition-transform duration-300">
+            <div class="bg-red-100 p-4 rounded-full mb-4">
+                <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M18.364 5.636l-1.414 1.414M6.343 17.657l-1.414-1.414M5.636 5.636l1.414 1.414M17.657 17.657l1.414-1.414M12 8v4l3 3"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+            </div>
+            <p class="text-5xl font-bold text-red-600 mb-2">1,70%</p>
+            <p class="text-gray-700 font-semibold mb-4">Detractores</p>
+            <div class="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-red-400 to-red-600 animate-pulse" style="width: 1.7%"></div>
+            </div>
         </div>
     </div>
+    <div class="mt-10 px-6 py-4 bg-blue-50 border-t border-blue-200 rounded-b-2xl text-center">
+        <p class="text-base text-blue-900">
+            <span class="font-bold">NPS (Net Promoter Score):</span> Métrica que mide la lealtad de los clientes en una escala de -100 a 100.
+        </p>
+    </div>
 </section>
-<section class="bg-blue-500 text-white py-12 px-6">
+<section class="bg-gradient-to-br from-blue-500 via-blue-400 to-blue-300 text-white py-16 px-4">
     <div class="max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold mb-2">Novablog</h2>
-        <p class="mb-10">Ponte al día con los descubrimientos médicos y consejos de salud innovadores, de la mano de nuestros médicos expertos.</p>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <h2 class="text-4xl font-extrabold mb-3 text-center drop-shadow-lg">Novablog</h2>
+        <p class="mb-12 text-center text-lg text-blue-100">Ponte al día con los descubrimientos médicos y consejos de salud innovadores, de la mano de nuestros médicos expertos.</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Tarjeta 1 -->
-            <div class="bg-white text-black rounded-lg shadow p-4">
-                <img src="/imagenes/1.png" alt="Imagen 1" class="rounded-t-lg mb-2" />
-                <p class="text-sm text-gray-500">10/06/2025</p>
-                <h3 class="text-md font-medium my-2">Cáncer de próstata: el primer paso para la detección temprana es vencer el tabú</h3>
+            <div class="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300 group">
+                <img src="/imagenes/1.png" alt="Imagen 1" class="rounded-xl mb-4 w-full h-40 object-cover shadow" />
+                <span class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-2">10/06/2025</span>
+                <h3 class="text-lg font-semibold text-blue-900 text-center mb-2 group-hover:text-blue-600 transition">Cáncer de próstata: el primer paso para la detección temprana es vencer el tabú</h3>
+                <div class="flex items-center justify-center mt-2">
+                    <svg class="w-5 h-5 text-blue-400 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 20l9-5-9-5-9 5 9 5z" />
+                        <path d="M12 12V4" />
+                    </svg>
+                    <span class="text-xs text-blue-400">Leer más</span>
+                </div>
             </div>
-
             <!-- Tarjeta 2 -->
-            <div class="bg-white text-black rounded-lg shadow p-4">
-                <img src="/imagenes/2.png" alt="Imagen 2" class="rounded-t-lg mb-2" />
-                <p class="text-sm text-gray-500">5/06/2025</p>
-                <h3 class="text-md font-medium my-2">Cáncer de cuello uterino: el más prevenible, pero en Ecuador, todavía es mortal.</h3>
+            <div class="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300 group">
+                <img src="/imagenes/2.png" alt="Imagen 2" class="rounded-xl mb-4 w-full h-40 object-cover shadow" />
+                <span class="bg-pink-100 text-pink-700 text-xs font-bold px-3 py-1 rounded-full mb-2">5/06/2025</span>
+                <h3 class="text-lg font-semibold text-blue-900 text-center mb-2 group-hover:text-pink-600 transition">Cáncer de cuello uterino: el más prevenible, pero en Ecuador, todavía es mortal.</h3>
+                <div class="flex items-center justify-center mt-2">
+                    <svg class="w-5 h-5 text-pink-400 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 20l9-5-9-5-9 5 9 5z" />
+                        <path d="M12 12V4" />
+                    </svg>
+                    <span class="text-xs text-pink-400">Leer más</span>
+                </div>
             </div>
-
             <!-- Tarjeta 3 -->
-            <div class="bg-white text-black rounded-lg shadow p-4">
-                <img src="/imagenes/3.png" alt="Imagen 3" class="rounded-t-lg mb-2" />
-                <p class="text-sm text-gray-500">16/05/2025</p>
-                <h3 class="text-md font-medium my-2">Vivir con hipertensión: siete consejos prácticos para una vida plena</h3>
+            <div class="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300 group">
+                <img src="/imagenes/3.png" alt="Imagen 3" class="rounded-xl mb-4 w-full h-40 object-cover shadow" />
+                <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full mb-2">16/05/2025</span>
+                <h3 class="text-lg font-semibold text-blue-900 text-center mb-2 group-hover:text-green-600 transition">Vivir con hipertensión: siete consejos prácticos para una vida plena</h3>
+                <div class="flex items-center justify-center mt-2">
+                    <svg class="w-5 h-5 text-green-400 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 20l9-5-9-5-9 5 9 5z" />
+                        <path d="M12 12V4" />
+                    </svg>
+                    <span class="text-xs text-green-400">Leer más</span>
+                </div>
             </div>
-
             <!-- Tarjeta 4 -->
-            <div class="bg-white text-black rounded-lg shadow p-4">
-                <img src="/imagenes/4.png" alt="Imagen 4" class="rounded-t-lg mb-2" />
-                <p class="text-sm text-gray-500">7/05/2025</p>
-                <h3 class="text-md font-medium my-2">Cáncer de ovario: tres maneras de prevenir y detectar a tiempo la enfermedad</h3>
+            <div class="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 transition-transform duration-300 group">
+                <img src="/imagenes/4.png" alt="Imagen 4" class="rounded-xl mb-4 w-full h-40 object-cover shadow" />
+                <span class="bg-yellow-100 text-yellow-700 text-xs font-bold px-3 py-1 rounded-full mb-2">7/05/2025</span>
+                <h3 class="text-lg font-semibold text-blue-900 text-center mb-2 group-hover:text-yellow-600 transition">Cáncer de ovario: tres maneras de prevenir y detectar a tiempo la enfermedad</h3>
+                <div class="flex items-center justify-center mt-2">
+                    <svg class="w-5 h-5 text-yellow-400 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M12 20l9-5-9-5-9 5 9 5z" />
+                        <path d="M12 12V4" />
+                    </svg>
+                    <span class="text-xs text-yellow-400">Leer más</span>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
-<!-- Footer -->
-<footer class="bg-blue-900 text-white py-12">
+<footer class="bg-blue-900 text-white py-2">
     <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="mb-6 md:mb-0">
@@ -258,11 +286,10 @@
             </div>
         </div>
         <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-300">
-            <p>© 2023 Hospital  Nova Salud. Todos los derechos reservados.</p>
+            <p>© 2023 Hospital Nova Salud. Todos los derechos reservados.</p>
         </div>
     </div>
 </footer>
-
 <script>
     new Swiper(".mySwiper", {
         loop: true,

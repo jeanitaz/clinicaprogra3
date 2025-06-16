@@ -1,10 +1,7 @@
 package com.itsqmet.ProyectoPrograIII.Entidad;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -21,6 +18,9 @@ public class Cita {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String descripcion;
+    private String nombrePaciente;
+    private String pacienteCedula;
     private Date fechaHora;
+    private String especialidad;
+
 }

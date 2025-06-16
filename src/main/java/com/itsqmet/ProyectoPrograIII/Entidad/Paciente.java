@@ -1,9 +1,6 @@
 package com.itsqmet.ProyectoPrograIII.Entidad;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
@@ -33,7 +30,7 @@ public class Paciente {
     @NotBlank(message = "La cédula es obligatoria")
     private String cedula;
 
-    @DateTimeFormat (pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date fechaNacimiento;
 
     @NotBlank(message = "La dirección es obligatoria")
@@ -45,4 +42,5 @@ public class Paciente {
     @Pattern(regexp = "\\d{10}")
     @NotBlank(message = "El teléfono debe tener 10 dígitos")
     private String telefono;
+
 }
