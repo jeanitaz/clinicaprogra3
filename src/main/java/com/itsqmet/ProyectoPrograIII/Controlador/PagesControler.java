@@ -5,15 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class PagesControler {
-
+    @GetMapping("/cooming")
+    public String mostrarCooming() {return "Pages/paciencia";}
     @GetMapping("/admin")
-    public String mostrarAdmin() {
-        return "Pages/admin";
-    }
+    public String mostrarAdmin() {return "Pages/admin";}
     @GetMapping("/administrador")
-    public String mostrarAdministrador() {
-        return "Pages/administrador";
-    }
+    public String mostrarAdministrador() {return "Pages/administrador";}
     @GetMapping("/home")
     public String mostrarHome() {
         return "paciente";

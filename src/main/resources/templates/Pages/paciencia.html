@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cooming Soon</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body>
+<section class="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-emerald-400 via-blue-200 to-blue-900">
+  <div class="w-full max-w-3xl mx-auto bg-white/90 rounded-3xl shadow-2xl p-10 flex flex-col items-center gap-10">
+    <img src="/imagenes/mr-bean.gif" alt="coming soon" class="w-56 h-56 object-cover rounded-2xl shadow-lg border-4 border-emerald-200 mb-2">
+    <div class="flex flex-col items-center gap-4">
+      <h2 class="text-center text-emerald-500 text-5xl md:text-6xl font-extrabold font-manrope drop-shadow">Coming Soon</h2>
+      <p class="text-center text-gray-600 text-lg md:text-xl font-medium">¡Solo 5 días para el gran lanzamiento de la Nueva Interfaz y Funcionalidades para nuestra Clinica!</p>
+    </div>
+    <div class="flex items-center justify-center gap-4 w-full">
+      <div class="bg-white/80 rounded-xl shadow p-4 flex flex-col items-center w-20">
+        <h3 class="countdown-element days text-3xl font-bold text-emerald-600"></h3>
+        <span class="text-xs text-gray-500 font-semibold">DÍAS</span>
+      </div>
+      <span class="text-2xl font-bold text-gray-400">:</span>
+      <div class="bg-white/80 rounded-xl shadow p-4 flex flex-col items-center w-20">
+        <h3 class="countdown-element hours text-3xl font-bold text-emerald-600"></h3>
+        <span class="text-xs text-gray-500 font-semibold">HRS</span>
+      </div>
+      <span class="text-2xl font-bold text-gray-400">:</span>
+      <div class="bg-white/80 rounded-xl shadow p-4 flex flex-col items-center w-20">
+        <h3 class="countdown-element minutes text-3xl font-bold text-emerald-600"></h3>
+        <span class="text-xs text-gray-500 font-semibold">MIN</span>
+      </div>
+      <span class="text-2xl font-bold text-gray-400">:</span>
+      <div class="bg-white/80 rounded-xl shadow p-4 flex flex-col items-center w-20">
+        <h3 class="countdown-element seconds text-3xl font-bold text-emerald-600"></h3>
+        <span class="text-xs text-gray-500 font-semibold">SEG</span>
+      </div>
+    </div>
+    <h6 class="text-center text-emerald-500 text-base font-semibold">Fecha de Lanzamiento: 20 Junio, 2025</h6>
+    <form class="w-full flex flex-col sm:flex-row gap-4 items-center justify-center">
+      <a href="index" type="submit" class="px-6 py-3 bg-blue-500 hover:bg-emerald-700 text-white font-bold rounded-lg shadow transition-all duration-300">Continuar de todos Modos </a>
+    </form>
+  </div>
+</section>
+<!--Javascript-->
+<script>
+    // count-down timer
+    let dest = new Date("jun 20, 2025 23:59:59").getTime();
+    let x = setInterval(function () {
+        let now = new Date().getTime();
+        let diff = dest - now;
+        // Check if the countdown has reached zero or negative
+        if (diff <= 0) {
+            // Set the destination date to the same day next month
+            let nextMonthDate = new Date();
+            nextMonthDate.setMonth(nextMonthDate.getMonth() + 1);
+
+            // If the current month is December, set the destination date to the same day next year
+            if (nextMonthDate.getMonth() === 0) {
+                nextMonthDate.setFullYear(nextMonthDate.getFullYear() + 1);
+            }
+
+            dest = nextMonthDate.getTime();
+            return; // Exit the function
+        }
+
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        if (days < 10) {
+            days = `0${days}`;
+        }
+
+        if (hours < 10) {
+            hours = `0${hours}`;
+        }
+        if (minutes < 10) {
+            minutes = `0${minutes}`;
+        }
+        if (seconds < 10) {
+            seconds = `0${seconds}`;
+        }
+
+        // Get elements by class name
+        let countdownElements = document.getElementsByClassName("countdown-element");
+
+        // Loop through the elements and update their content
+        for (let i = 0; i < countdownElements.length; i++) {
+            let className = countdownElements[i].classList[1]; // Get the second class name
+            switch (className) {
+                case "days":
+                    countdownElements[i].innerHTML = days;
+                    break;
+                case "hours":
+                    countdownElements[i].innerHTML = hours;
+                    break;
+                case "minutes":
+                    countdownElements[i].innerHTML = minutes;
+                    break;
+                case "seconds":
+                    countdownElements[i].innerHTML = seconds;
+                    break;
+                default:
+                    break;
+            }
+        }
+    }, 10);
+</script>
+</body>
+</html>
