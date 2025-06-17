@@ -23,4 +23,14 @@ public class Cita {
     private Date fechaHora;
     private String especialidad;
 
+    @ManyToOne
+    @JoinColumn(name = "medico_id")
+    private Medico medico;
+
+    @ManyToOne
+    @JoinColumn(name = "paciente_id")
+    private Paciente paciente;
+
+    @OneToOne(mappedBy = "cita")
+    private Factura factura;
 }

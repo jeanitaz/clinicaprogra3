@@ -42,7 +42,7 @@ public class PacienteServicio {
     }
 
     //Buscar Paciente por Cedula
-    public boolean existePorCedula(String cedula) {
+    public boolean buscarPorCedula(String cedula) {
         return pacienteRepository.findByCedula(cedula).isPresent();
     }
 }

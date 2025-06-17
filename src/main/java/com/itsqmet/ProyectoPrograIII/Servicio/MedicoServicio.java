@@ -17,6 +17,7 @@ public class MedicoServicio {
     public List<Medico> mostrarMedicos() {
         return medicoRepositorio.findAll();
     }
+
     //Buscar Medico por Especialidad
     public List<Medico> buscarMedicoPorEspecialidad(String especialidad) {
         if (especialidad == null || especialidad.isEmpty()) {
@@ -40,5 +41,9 @@ public class MedicoServicio {
         } else {
             return medicoRepositorio.findByUsuarioContainingIgnoreCase(usuario);
         }
+    }
+    //Buscar Medico por Id
+    public Medico buscarMedicoPorId(Long id) {
+        return medicoRepositorio.findById(id).orElse(null);
     }
 }

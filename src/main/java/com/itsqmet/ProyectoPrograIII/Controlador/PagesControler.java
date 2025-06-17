@@ -75,4 +75,8 @@ public class PagesControler {
     public String mostrarSoporte() {
         return "Pages/Soporte";
     }
+    @GetMapping("/Citas")
+    public String mostrarCitas() {
+        return "Pages/Citas";
+    }
 }

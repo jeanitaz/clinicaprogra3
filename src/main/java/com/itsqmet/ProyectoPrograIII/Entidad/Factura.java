@@ -14,5 +14,11 @@ public class Factura {
     private Double monto;
     private String estado;
 
+    @OneToOne
+    @JoinColumn(name = "cita_id")
+    private Cita cita;
 
+    @ManyToOne
+    @JoinColumn(name = "paciente_id")
+    private Paciente paciente;
 }

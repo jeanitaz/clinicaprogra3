@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface CitaRepositorio extends JpaRepository<Cita, Long> {
     List<Cita> findByEspecialidad(String especialidad);
+
+    List<Cita> findByMedicoId(Long medicoId);
 }
